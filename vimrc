@@ -19,13 +19,13 @@ Bundle "godlygeek/tabular"
 Bundle "sjl/gundo.vim"
 Bundle "skwp/YankRing.vim"
 Bundle "PProvost/vim-ps1"
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
 filetype plugin indent on    " required
 nnoremap <silent> <F5> :NERDTree<CR>
-
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
