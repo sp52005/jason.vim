@@ -14,13 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle "itchyny/lightline.vim"
 Bundle "godlygeek/tabular"
 Bundle "sjl/gundo.vim"
 Bundle "skwp/YankRing.vim"
 Bundle "PProvost/vim-ps1"
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'starrlingo/starrlingo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
