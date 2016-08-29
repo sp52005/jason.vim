@@ -52,8 +52,6 @@ set encoding=utf-8
 set tabpagemax=100
 
 syntax on
-set t_Co=256
-color moskyfav
 
 set cursorline
 
