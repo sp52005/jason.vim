@@ -103,8 +103,9 @@ noremap <silent> <Leader>v :vsplit<CR>
 " ,h: toggle highlight
 noremap <silent> <Leader>h :set hlsearch!<CR>:set hlsearch?<CR>
 
-" ,p: toggle paste mode
+" ,p or F12: toggle paste mode
 noremap <silent> <Leader>p :set paste!<CR>:set paste?<CR>
+set pastetoggle=<F12>
 
 " ,s: toggle spelling check
 " zg: mark word as good
