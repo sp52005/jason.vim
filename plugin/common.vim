@@ -57,20 +57,10 @@ set cursorline
 
 set colorcolumn=81
 
-" make Ctrl+Z work in insert mode
-" pressing Ctrl-O switches to normal mode for one command
-inoremap <C-Z> <C-O><C-Z>
-
 let mapleader = ","
 
 " F5 to open NERDTree
 nnoremap <silent> <F5> :NERDTree<CR>
-
-" buffer
-noremap <Leader>r :e!<CR>
-noremap <Leader>e :edit <C-R>=expand("%:p:h")<CR>/
-noremap <Leader>d :bd<CR>
-noremap <Leader>b :buffers<CR>:b
 
 " tab
 noremap <Leader>t :tabedit <C-R>=expand("%:p:h")<CR>/

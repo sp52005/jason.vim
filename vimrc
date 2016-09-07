@@ -17,6 +17,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle "godlygeek/tabular"
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'vim-scripts/EnhCommentify.vim'
 Plugin 'starrlingo/starrlingo.vim'
 
 " All of your Plugins must be added before the following line
