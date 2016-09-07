@@ -66,19 +66,6 @@ let mapleader = ","
 " F5 to open NERDTree
 nnoremap <silent> <F5> :NERDTree<CR>
 
-" save
-noremap <Leader>w :w<CR>
-noremap <Leader>q :q!<CR>
-noremap <Leader>x :x<CR>
-noremap <Leader>z :w<CR><C-Z>
-noremap <Leader>W :wa<CR>
-noremap <Leader>Q :qa!<CR>
-noremap <Leader>X :xa<CR>
-noremap <Leader>Z :wa<CR><C-Z>
-noremap <Leader>!w :w !sudo tee %:p > /dev/null<CR>
-" usually we don't wanna go ex mode. just miss the leader key.
-noremap Q :qa
-
 " buffer
 noremap <Leader>r :e!<CR>
 noremap <Leader>e :edit <C-R>=expand("%:p:h")<CR>/
@@ -101,6 +88,7 @@ set splitright
 noremap <silent> <Leader>v :vsplit<CR>
 
 " ,h: toggle highlight
+set hlsearch
 noremap <silent> <Leader>h :set hlsearch!<CR>:set hlsearch?<CR>
 
 " ,p or F12: toggle paste mode
@@ -138,18 +126,6 @@ noremap <silent> <Leader>s :set spell!<CR>:set spell?<CR>
 set nofoldenable
 noremap <silent> <Leader>f :set foldenable!<CR>:set foldenable?<CR>
 
-"" makes the docstring is foldable
-"autocmd FileType python
-"\ syn region pythonString
-"\     start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend
-"\     contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
-"\     fold
-"\ |
-"\ syn region pythonRawString
-"\     start=+[uU]\=[rR]\z('''\|"""\)+ end="\z1" keepend
-"\     contains=pythonSpaceError,pythonDoctest,@Spell
-"\     fold
-
 " ,g: toggle registers
 noremap <silent> <Leader>g :registers<CR>
 
@@ -162,10 +138,11 @@ autocmd BufReadPost *
 " Tabularize
 " ref:
 " https://raw.githubusercontent.com/godlygeek/tabular/master/doc/Tabular.txt
-noremap <silent> <Leader>a= :Tabularize / = /l0<CR>
-noremap <silent> <Leader>a: :Tabularize /: /l0<CR>
-" TODO: not so perfect
-noremap <silent> <Leader>at :Tabularize /[\|+].\?/l0<CR>
+map t= :Tabularize /=<CR>
+map t, :Tabularize /,<CR>
+map t: :Tabularize /:<CR>
+map t\| :Tabularize /\|<CR>
+map t<SPACE>  :Tabularize /\S\+<CR>
 
 " don't backup
 set nobackup
@@ -177,17 +154,6 @@ set backspace=eol,start,indent
 
 " move smoothly between lines
 set whichwrap=b,s,<,>,[,]
-
-" refine the arrow-keys
-noremap <down> g<down>
-noremap <up> g<up>
-" will break the completion menu
-"imap <down> <C-O><down>
-"imap <up> <C-O><up>
-noremap <C-down> 3<C-E>
-noremap <C-up> 3<C-Y>
-imap <C-down> <C-O><C-down>
-imap <C-up> <C-O><C-up>
 
 " don't redraw while executing macros (good performance config)
 set lazyredraw
