@@ -13,11 +13,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-vinegar'
 Bundle "godlygeek/tabular"
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/EnhCommentify.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'kien/ctrlp.vim'
 Plugin 'starrlingo/starrlingo.vim'
 
 " All of your Plugins must be added before the following line
