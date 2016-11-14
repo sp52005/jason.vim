@@ -1,7 +1,6 @@
 " enable filetype plugins
 filetype plugin on
 filetype indent on
-
 set ruler
 set number
 
@@ -147,3 +146,10 @@ set whichwrap=b,s,<,>,[,]
 
 " don't redraw while executing macros (good performance config)
 set lazyredraw
+
+" UltiSnip
+" ref:
+" https://github.com/SirVer/ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
