@@ -84,6 +84,13 @@ noremap <silent> <Leader>h :set hlsearch!<CR>:set hlsearch?<CR>
 noremap <silent> <Leader>p :set paste!<CR>:set paste?<CR>
 set pastetoggle=<F12>
 
+" EasyMotion
+map <Leader><Leader> <Plug>(easymotion-prefix)
+map <Leader>j <Plug>(easymotion-prefix)j
+map <Leader>k <Plug>(easymotion-prefix)k
+map <Leader>n <Plug>(easymotion-prefix)n
+map <Leader>N <Plug>(easymotion-prefix)N
+
 " ,s: toggle spelling check
 " zg: mark word as good
 " zb: mark word as bad

@@ -15,6 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-vinegar'
 Bundle "godlygeek/tabular"
+Plugin 'easymotion/vim-easymotion'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/EnhCommentify.vim'
 Plugin 'SirVer/ultisnips'
