@@ -20,6 +20,8 @@ Plugin 'vim-scripts/EnhCommentify.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'starrlingo/starrlingo.vim'
 
 " All of your Plugins must be added before the following line

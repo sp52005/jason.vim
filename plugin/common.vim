@@ -153,3 +153,9 @@ set lazyredraw
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" airline-vim & airline-vim-theme
+" ref:
+" https://github.com/vim-airline/vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='zenburn'
