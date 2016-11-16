@@ -44,7 +44,7 @@ set formatoptions=
 " Ctrl+N
 set pumheight=15
 
-set mouse=a
+set mouse=c
 
 set encoding=utf-8
 
@@ -164,5 +164,24 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " airline-vim & airline-vim-theme
 " ref:
 " https://github.com/vim-airline/vim-airline
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='zenburn'
+
+" ctags
+" Ctrl-] Jump to the tag underneath the cursor
+" Ctrl-t Jump back up in the tag stack
+" :ts <tag> <RET> Search for a particular tag
+" :tn Go to the next definition for the last tag
+" :tp Go to the previous definition for the last tag
+" :ts List all of the definitions of the last tag
+" F2 create tags file
+map <F2> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+
+" taglist
+" ref:
+" https://github.com/vim-scripts/taglist.vim
+map <F3> :TlistToggle<CR><CR>
+
+" jcommenter
+" ref:
+" https://github.com/vim-scripts/jcommenter.vim
+noremap <Leader>c :call JCommentWriter()<CR>
