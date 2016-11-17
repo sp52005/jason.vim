@@ -174,7 +174,8 @@ let g:airline_theme='zenburn'
 " :tp Go to the previous definition for the last tag
 " :ts List all of the definitions of the last tag
 " F2 create tags file
-map <F2> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+map <F2> :!ctags -R -f ~/dev/tags --c++-kinds=+p --fields=+iaS --extra=+q ~/dev<CR><CR>
+set tags=~/dev/tags
 
 " taglist
 " ref:
