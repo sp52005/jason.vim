@@ -17,7 +17,6 @@ Bundle 'tpope/vim-vinegar'
 Bundle "godlygeek/tabular"
 Plugin 'easymotion/vim-easymotion'
 Plugin 'pangloss/vim-javascript'
-Plugin 'vim-scripts/EnhCommentify.vim'
 Plugin 'vim-scripts/jcommenter.vim'
 Plugin 'universal-ctags/ctags'
 Plugin 'vim-scripts/taglist.vim'
@@ -28,6 +27,7 @@ Plugin 'vim-scripts/yate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'starrlingo/starrlingo.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

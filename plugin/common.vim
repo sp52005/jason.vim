@@ -185,4 +185,12 @@ map <F3> :TlistToggle<CR><CR>
 " jcommenter
 " ref:
 " https://github.com/vim-scripts/jcommenter.vim
-noremap <Leader>c :call JCommentWriter()<CR>
+noremap <Leader>cw :call JCommentWriter()<CR>
+
+" nerdcommenter
+" <leader>cc Comment out the current line or text selected in visual mode
+" <leader>c<space> Toggles the comment state of the selected line(s)
+" <leader>cy Same as cc except that the commented line(s) are yanked first.
+" ref:
+" https://github.com/scrooloose/nerdcommenter
+let g:NERDSpaceDelims=1
