@@ -194,3 +194,19 @@ noremap <Leader>cw :call JCommentWriter()<CR>
 " ref:
 " https://github.com/scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1
+
+" JavaImp
+" :JI generate import statement
+" :JIS sort existing import statement
+" Ctrl-p auto suggestion
+" ref:
+" https://github.com/rustushki/JavaImp.vim
+let g:JavaImpDataDir = $HOME . "/.vim/JavaImp"
+let g:JavaImpPaths = $HOME . "/dev"
+let g:JavaImpSortPkgSep = 1
+let g:JavaImpTopImports = [
+    \ 'com\..*',
+    \ 'org\..*',
+    \ 'java\..*',
+    \ 'javax\..*']
+nnoremap <silent> <F4> mq <bar> :JI<CR><CR> <bar> :JIS<CR> <bar> :%s/package com.*/&\r/ge<CR> <bar> :%s/\(import.*\)\@<=\n\{3,}/\r\r/e<CR> <bar> `q
