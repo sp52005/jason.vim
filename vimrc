@@ -28,6 +28,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'starrlingo/starrlingo.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'akhaku/vim-java-unused-imports'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

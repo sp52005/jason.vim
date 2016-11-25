@@ -66,6 +66,7 @@ noremap <Leader>t :tabedit <C-R>=expand("%:p:h")<CR>/
 " gt: next tab
 " gT: previous tab
 noremap <Leader><Tab> :tabnext<CR>
+noremap <Leader>q :tabprevious<CR>
 " ,1 ,2 ,3: go specific tab
 for i in range(1, 9)
     exec 'nmap <Leader>'.i.' '.i.'gt'
@@ -194,13 +195,20 @@ noremap <Leader>cw :call JCommentWriter()<CR>
 " ref:
 " https://github.com/scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1
+let g:NERDDefaultAlign = 'left'
 
-" JavaImp
+" 1. JavaImp
 " :JI generate import statement
 " :JIS sort existing import statement
 " Ctrl-p auto suggestion
 " ref:
 " https://github.com/rustushki/JavaImp.vim
+" 2. vim-java-unused-imports
+" :UnusedImports highlight all unused imports
+" :UnusedImportsReset clear the highlights
+" :UnusedImportsRemove remove all unused imports
+" ref:
+" https://github.com/akhaku/vim-java-unused-imports
 let g:JavaImpDataDir = $HOME . "/.vim/JavaImp"
 let g:JavaImpPaths = $HOME . "/dev"
 let g:JavaImpSortPkgSep = 1
@@ -209,4 +217,6 @@ let g:JavaImpTopImports = [
     \ 'org\..*',
     \ 'java\..*',
     \ 'javax\..*']
-nnoremap <silent> <F4> mq <bar> :JI<CR><CR> <bar> :JIS<CR> <bar> :%s/package com.*/&\r/ge<CR> <bar> :%s/\(import.*\)\@<=\n\{3,}/\r\r/e<CR> <bar> `q
+" set mark -> remove unused import -> sort -> add blank line after package statement ->
+" keep 1 blank line after last import statement -> jump back to mark
+nnoremap <silent> <F4> mq <bar> :UnusedImportsRemove<CR> <bar> :JIS<CR> <bar> :%s/package com.*/&\r/ge<CR> <bar> :%s/\(import.*\)\@<=\n\{3,}/\r\r/e<CR> <bar> `q
