@@ -183,6 +183,11 @@ set tags=~/dev/tags
 " https://github.com/vim-scripts/taglist.vim
 map <F3> :TlistToggle<CR><CR>
 
+" ctrlp
+" Ctrl-t Open in new tab
+" ref:
+" https://github.com/kien/ctrlp.vim
+
 " jcommenter
 " ref:
 " https://github.com/vim-scripts/jcommenter.vim
@@ -194,7 +199,7 @@ noremap <Leader>cw :call JCommentWriter()<CR>
 " <leader>cy Same as cc except that the commented line(s) are yanked first.
 " ref:
 " https://github.com/scrooloose/nerdcommenter
-let g:NERDSpaceDelims=1
+let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
 " 1. JavaImp
@@ -219,4 +224,5 @@ let g:JavaImpTopImports = [
     \ 'javax\..*']
 " set mark -> remove unused import -> sort -> add blank line after package statement ->
 " keep 1 blank line after last import statement -> jump back to mark
-nnoremap <silent> <F4> mq <bar> :UnusedImportsRemove<CR> <bar> :JIS<CR> <bar> :%s/package com.*/&\r/ge<CR> <bar> :%s/\(import.*\)\@<=\n\{3,}/\r\r/e<CR> <bar> `q
+nnoremap <silent> <F4> mq <CR> <bar> :JIS<CR> <bar> :%s/package com.*/&\r/ge<CR> <bar> :%s/\(import.*\)\@<=\n\{3,}/\r\r/e<CR> <bar> `q
+nnoremap <silent> <F6> :UnusedImportsRemove<CR>
