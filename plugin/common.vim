@@ -7,6 +7,7 @@ set number
 set textwidth=80
 set wrap
 set linebreak
+set laststatus=2
 
 set showmatch
 
@@ -165,7 +166,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " airline-vim & airline-vim-theme
 " ref:
 " https://github.com/vim-airline/vim-airline
-let g:airline_theme='zenburn'
+let g:airline_theme='base16'
 
 " ctags
 " Ctrl-] Jump to the tag underneath the cursor
@@ -187,6 +188,8 @@ map <F3> :TlistToggle<CR><CR>
 " Ctrl-t Open in new tab
 " ref:
 " https://github.com/kien/ctrlp.vim
+:nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
+:nnoremap <silent><Leader><C-t> :q<CR><bar><Leader>q
 
 " jcommenter
 " ref:
