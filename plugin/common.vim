@@ -201,4 +201,4 @@ let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
 " Shortcut for running python
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+map <F9> :exec '!python' shellescape(@%, 1)<CR>
