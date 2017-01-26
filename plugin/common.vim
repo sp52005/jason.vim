@@ -19,8 +19,8 @@ set smartcase
 
 set autoindent
 
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set smarttab
 
@@ -165,7 +165,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " airline-vim & airline-vim-theme
 " ref:
-" https://github.com/vim-airline/vim-airline
+" https://github.com/vim-airline/vim-airline/wiki/screenshots
 let g:airline_theme='base16'
 
 " ctags
@@ -191,11 +191,6 @@ map <F3> :TlistToggle<CR><CR>
 :nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
 :nnoremap <silent><Leader><C-t> :q<CR><bar><Leader>q
 
-" jcommenter
-" ref:
-" https://github.com/vim-scripts/jcommenter.vim
-noremap <Leader>cw :call JCommentWriter()<CR>
-
 " nerdcommenter
 " <leader>cc Comment out the current line or text selected in visual mode
 " <leader>c<space> Toggles the comment state of the selected line(s)
@@ -205,27 +200,5 @@ noremap <Leader>cw :call JCommentWriter()<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
-" 1. JavaImp
-" :JI generate import statement
-" :JIS sort existing import statement
-" Ctrl-p auto suggestion
-" ref:
-" https://github.com/rustushki/JavaImp.vim
-" 2. vim-java-unused-imports
-" :UnusedImports highlight all unused imports
-" :UnusedImportsReset clear the highlights
-" :UnusedImportsRemove remove all unused imports
-" ref:
-" https://github.com/akhaku/vim-java-unused-imports
-let g:JavaImpDataDir = $HOME . "/.vim/JavaImp"
-let g:JavaImpPaths = $HOME . "/dev"
-let g:JavaImpSortPkgSep = 1
-let g:JavaImpTopImports = [
-    \ 'com\..*',
-    \ 'org\..*',
-    \ 'java\..*',
-    \ 'javax\..*']
-" set mark -> remove unused import -> sort -> add blank line after package statement ->
-" keep 1 blank line after last import statement -> jump back to mark
-nnoremap <silent> <F4> mq <CR> <bar> :JIS<CR> <bar> :%s/package com.*/&\r/ge<CR> <bar> :%s/\(import.*\)\@<=\n\{3,}/\r\r/e<CR> <bar> `q
-nnoremap <silent> <F6> :UnusedImportsRemove<CR>
+" Shortcut for running python
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
