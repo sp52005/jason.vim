@@ -22,8 +22,6 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'starrlingo/starrlingo.vim'
 Plugin 'scrooloose/nerdcommenter'
 

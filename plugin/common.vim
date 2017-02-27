@@ -61,6 +61,8 @@ let mapleader = ","
 
 " F5 to open NERDTree
 nnoremap <silent> <F5> :NERDTree<CR>
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
 
 " tab
 noremap <Leader>t :tabedit <C-R>=expand("%:p:h")<CR>/
@@ -166,7 +168,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " airline-vim & airline-vim-theme
 " ref:
 " https://github.com/vim-airline/vim-airline/wiki/screenshots
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
+" set status line
+set laststatus=2
+" enable powerline-fonts
+let g:airline_powerline_fonts = 1
+
 
 " ctags
 " Ctrl-] Jump to the tag underneath the cursor
@@ -176,8 +183,7 @@ let g:airline_theme='base16'
 " :tp Go to the previous definition for the last tag
 " :ts List all of the definitions of the last tag
 " F2 create tags file
-map <F2> :!ctags -R -f ~/dev/tags --c++-kinds=+p --fields=+iaS --extra=+q ~/dev<CR><CR>
-set tags=~/dev/tags
+map <F2> :!ctags -R -f ~/tags --c++-kinds=+p --fields=+iaS --extra=+q ~/<CR><CR>
 
 " taglist
 " ref:
